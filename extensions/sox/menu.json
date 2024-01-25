@@ -1,0 +1,16 @@
+{
+"comment001": "工作咩闹钟 on Kindle",
+"items": [
+{
+"name": "工作咩闹钟",
+"priority": -1,
+"items": [
+{"name": "显示IP", "priority": 1, "action": "eips 7 1 \"IP: `ifconfig wlan0 | grep 'inet addr' | awk -F '[ :]' '{print $13}'`\""},
+{"name": "启动服务", "priority": 2, "action": "./start.sh"},
+{"name": "停止服务", "priority": 3, "action": "./stop.sh"},
+{"name": "上一首", "priority": 4, "action": "curl http://127.0.0.1:8080/prev"},
+{"name": "下一首", "priority": 5, "action": "curl http://127.0.0.1:8080/next"},
+{"name": "暂停", "priority": 6, "action": "pkill -STOP gst-launch"},
+{"name": "恢复播放", "priority": 7, "action": "pkill -CONT gst-launch"},
+{"name": "停止", "priority": 8, "action": "./stopPlay.sh"}
+]}]}

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension>
+	<information>
+		<name>Sox Media Player v2</name>
+		<version>0.2</version>
+		<author>thebeginning x DHDurgee</author>
+		<id>Sox Media Player v2</id>
+	</information>
+	<menus>
+		<menu type="json" dynamic="true">menu.json</menu>
+	</menus>
+</extension>
