@@ -1,5 +1,6 @@
 {
 "comment001": "工作咩闹钟 on Kindle",
+"comment002": "兼sox本地音乐播放器",
 "items": [
 {
 "name": "工作咩闹钟",
@@ -12,5 +13,8 @@
 {"name": "下一首", "priority": 5, "action": "curl http://127.0.0.1:8080/next"},
 {"name": "暂停", "priority": 6, "action": "pkill -STOP gst-launch"},
 {"name": "恢复播放", "priority": 7, "action": "pkill -CONT gst-launch"},
-{"name": "停止", "priority": 8, "action": "./stopPlay.sh"}
+{"name": "停止播放", "priority": 8, "action": "./stopPlay.sh"},
+{"name": "播放music目录", "priority": 9, "action": "find /mnt/us/music -type f -exec /mnt/us/extensions/sox/play.sh {} \\;"},
+{"name": "播放music下一首", "priority": 10, "action": "pkill -9 gst-launch && pkill -9 sox"},
+{"name": "播放最后的缓存", "priority": 11, "action": "./play.sh play.mp3"}
 ]}]}
